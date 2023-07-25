@@ -41,7 +41,6 @@ class UserProfile(AbstractBaseUser, PermissionsMixin):
 
 
     class Meta:
-        db_table = "user_profile"
         verbose_name = "UserProfile"
         verbose_name_plural = "UserProfiles"
 

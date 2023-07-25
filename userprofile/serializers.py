@@ -39,8 +39,6 @@ class RegistrationSerializer(serializers.ModelSerializer):
         username = attrs.get("username")
         password = attrs.get("password")
         password1 = attrs.get("password1")
-        dob = attrs.get("dob")
-        gender = attrs.get("gender")
         # Check if all fields are provided
         if not all([first_name, last_name, email, username, password, password1]):
             raise serializers.ValidationError({"detail": "Please fill in all the fields."})
@@ -65,30 +63,6 @@ class RegistrationSerializer(serializers.ModelSerializer):
 
 
 class ResetPasswordSerializer(serializers.Serializer):
-    """Serializer for resetting user's password."""
-
-    email = serializers.EmailField(required=True)
-
-    def validate(self, attrs):
-        """Validate email address for password reset."""
-        email = attrs.get("email")
-        try:
-            user_obj = CustomUser.objects.get(email=email)
-        except CustomUser.DoesNotExist:
-            raise serializers.ValidationError({"details": "user does not exist"})
-        # Check if the user's email is verified (account activated) before proceeding with password reset
-        if not user_obj.is_verified:
-            raise serializers.ValidationError(
-                {
-                    "detail": "we sent you a verification mail. Please verify your email address first."
-                }
-            )
-
-        attrs["user"] = user_obj
-        return super().validate(attrs)
-
-
-class ConfirmResetPasswordSerializer(serializers.Serializer):
     """Serializer for confirming user's password reset."""
 
     new_password = serializers.CharField(required=True)
