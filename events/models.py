@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
-from .choices import TOPICCHOICES
+from .choices import TOPICCHOICES, CURRENCIES
 
 User = get_user_model()
 
@@ -14,9 +14,11 @@ class Event(models.Model):
     host = models.ForeignKey(User, on_delete=models.CASCADE)
     guests = models.ManyToManyField(User, blank=True, related_name="Guests")
     number_of_seats = models.PositiveIntegerField()
+    ticket_price = models.DecimalField(max_digits=8, decimal_places=2)
+    currency = models.CharField(max_length=10, choices=CURRENCIES, default="UZS")
     thumbnail = models.FileField(upload_to=None, max_length=100)
     description = models.TextField()
 
-
     def __str__(self) -> str:
         return self.name
+    

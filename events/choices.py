@@ -5,3 +5,10 @@ TOPICCHOICES = (
     ("Bussiness", "Bussiness"),
     ("Marketing", "Marketing"),
 )
+
+CURRENCIES = (
+    ("USD", "USD"),
+    ("UZS", "UZS"),
+    ("PLN", "PLN"),
+    ("RUB", "RUB"),
+)
