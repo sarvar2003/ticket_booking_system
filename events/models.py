@@ -12,6 +12,7 @@ class Event(models.Model):
     date = models.DateTimeField(auto_now=False, auto_now_add=False)
     place = models.CharField(max_length=250)
     host = models.ForeignKey(User, on_delete=models.CASCADE)
+    guests = models.ManyToManyField(User, blank=True, related_name="Guests")
     number_of_seats = models.PositiveIntegerField()
     thumbnail = models.FileField(upload_to=None, max_length=100)
     description = models.TextField()
