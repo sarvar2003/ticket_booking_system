@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.contrib.auth import get_user_model
 from rest_framework import views, generics, status
 from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from django.contrib.auth import authenticate, login
 from .serializers import (
@@ -71,7 +72,7 @@ class ResetPasswordApiView(generics.GenericAPIView):
 
     This view handles confirming the password reset using the reset token and setting the new password.
     """
-
+    permission_classes = [IsAuthenticated]
     serializer_class = ResetPasswordSerializer
 
     def get(self, request, *args, **kwargs):
