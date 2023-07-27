@@ -2,20 +2,18 @@
 
 This API can be used for ticket booking system. 🎫✅
 
-# Features:
-    * Create Events in many different topics 🎭🔊🧬⚖🔬
-    * Sell Tickets for events 💲💸💹
-    * Register for events of one's interest 🙌✨😮
-    * Buy tickets ☑☑
+**Features:** <br> 
+      *- Create Events in many different topics 🎭🔊🧬⚖🔬* <br>
+      *- Sell Tickets for events 💲💸💹* <br>
+      *- Register for events of one's interest 🙌✨😮* <br>
+      *- Buy tickets ☑☑* <br>
 
 APIs are implemented using Django Rest Framework.
 
-In order to use the APIs complete the following steps:
-    * Clone the repository
-    * Intsall dependencies:
-        ``` pip install -r requirements.txt
-    * Run the project
-        ``` python.exe manage.py runserver
-    * API documentation of the project can be found at : localhost:api/schema/docs
+In order to use the APIs complete the following steps: <br>
+    - Clone the repository: <br> ```git clone <repository link> ``` <br>
+    - Intsall dependencies: <br> ```git install -r requirements.txt ``` <br>
+    - Run the project: <br> ```python.exe manage.py runserver ``` <br>
+    - API documentation of the project can be found at : localhost:api/schema/docs
 
 Thank you 🙂😉
