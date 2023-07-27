@@ -10,7 +10,7 @@ This API can be used for ticket booking system. 🎫✅
 
 APIs are implemented using Django Rest Framework.
 
-In order to use the APIs complete the following steps: <br>
+In order to use the APIs do the following steps: <br>
     - Clone the repository: <br> ```git clone <repository link> ``` <br>
     - Intsall dependencies: <br> ```git install -r requirements.txt ``` <br>
     - Run the project: <br> ```python.exe manage.py runserver ``` <br>
