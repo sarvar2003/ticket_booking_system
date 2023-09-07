@@ -17,4 +17,6 @@ In order to use the APIs do the following steps: <br>
     - Run the project: <br> ```python.exe manage.py runserver ``` <br>
     - API documentation of the project can be found at : localhost:api/schema/docs
 
+P.S: Username field - Email
+
 Thank you 🙂😉
