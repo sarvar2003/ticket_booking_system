@@ -57,6 +57,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+"*",
 "https://domain.com",
 "https://api.domain.com",
 "http://localhost:8080",
